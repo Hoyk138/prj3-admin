@@ -10,7 +10,8 @@
 
 <link rel="stylesheet" type="text/css"
 	href="http://localhost:8080/team1_admin_prj3/common/css/main.css">
-	<link rel="stylesheet" type="text/css" href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css"/>
+<link rel="stylesheet" type="text/css"
+	href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
 <style type="text/css">
 #loginBox {
 	padding-top: 100px;
@@ -41,6 +42,7 @@
 	$(function() {
 
 		$("#btn").click(function() {
+			alert("!");
 			chkNull();
 		}); // click
 
@@ -153,7 +155,7 @@
 		<div id="footer">
 			<%@ include file="../../common/jsp/admin_include_footer.jsp"%>
 		</div>
-	</div>	
+	</div>
 </body>
 
 </html>

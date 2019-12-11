@@ -12,11 +12,6 @@
   <!-- SmartMenus 시작 -->
     <script type="text/javascript" src="http://localhost:8080/spring_mvc_temp/common/smart_menu/jquery.smartmenus.min.js"></script>
     <script type="text/javascript">
-    	$(function() {
-    		$('#main-menu').smartmenus({
-    			subMenusSubOffsetX: 1,
-    			subMenusSubOffsetY: -8
-    		});
-    	});
+
     </script>
     <!-- SmartMenus 끝 -->
