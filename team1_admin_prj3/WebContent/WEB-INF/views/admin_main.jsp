@@ -1,228 +1,185 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8" info="" session="true" isELIgnored="false"%>
+	pageEncoding="UTF-8" info="" session="true" isELIgnored="false"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지</title>
+<title>관리자 메인 페이지</title>
 <link rel="stylesheet" type="text/css"
-   href="http://localhost:8080/team1_admin_prj3/common/css/main.css" />
+	href="http://localhost:8080/team1_admin_prj3/common/css/main.css" />
 <link rel="stylesheet" type="text/css"
-   href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
+	href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
 <style type="text/css">
+#box {
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-left: 50px;
+	text-align: center;
+	border: solid 1px #333;
+	border-spacing: 30px
+}
+
+#mainBtn {
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 200px;
+	height: 30px;
+	line-height: 15px;
+}
 </style>
-
 <link rel="stylesheet"
-   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-   crossorigin="anonymous">
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
 <script
-   src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script
-   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-   crossorigin="anonymous"></script>
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
 <script
-   src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-   crossorigin="anonymous"></script>
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
 
-
-
-<!-- datepicker -->
-<link rel="stylesheet"
-   href="../common/css/bootstrap-datepicker3.min.css">
-<script src="../common/js/bootstrap-datepicker.min.js"></script>
-<script src="../common/js/bootstrap-datepicker.ko.min.js"></script>
 
 <script type="text/javascript">
-   $(function() {
-      $('.input-group.date').datepicker({
-         maxViewMode : 3,
-         language : "ko",
-         autoclose : true,
-         todayHighlight : true
-      });
-   });
+	$(function() {
+
+	});
 </script>
 </head>
 <body>
-   <div id="books">
-      <div id="header">
+	<div id="books">
 
-         <%@ include file="../../common/jsp/admin_include_header.jsp"%>
+		<div id="header">
 
-
-      </div>
-      <!-- header 끝 -->
-
-      <div id="container">
-
-         <div id="snb">
-
-            <%@ include file="../../common/jsp/admin_include_snb_member.jsp"%>
-
-         </div>
-
-         <div id="content">
-         
-         <h6>회원 관리 > 회원 조회</h6>
-         <h3>| 회원 조회</h3>
-         <br/>
-         
-            <div id="member_right"
-               style="width: 650px; height: 830px; margin-left: 200px; padding: 20px;">
-
-               <!-- 회원 정보 검색 시작 -->
-               <div id="member_searchbox"
-                  style="width: 550px; height: 220px; padding: 15px; border: 1px solid #333; margin-top: 25px; margin-left: 25px">
-
-                  <div class="btn-group"
-                     style="float: left; margin-left: 40px; margin-top: 10px">
-                     <button type="button" class="btn btn-secondary dropdown-toggle"
-                        data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">회원 전체</button>
-                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">---회원 전체---</a> <a
-                           class="dropdown-item" href="#">아이디</a> <a class="dropdown-item"
-                           href="#">회원 이름</a> <a class="dropdown-item" href="#">전화번호</a>
-                     </div>
-                  </div>
-
-                  <div class="input-group flex-nowrap"
-                     style="width: 300px; float: left; margin-left: 10px; margin-top: 10px">
-                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping"> <img
-                           src="http://localhost:8080/team1_admin_prj3_soin_191211_1642/common/images/search.png" style="height: 15px" />
-                        </span>
-                     </div>
-                     <input type="text" class="form-control" aria-label="Username"
-                        aria-describedby="addon-wrapping">
-                  </div>
+			<%@ include file="../../common/jsp/admin_include_header.jsp"%>
 
 
+		</div>
+		<!-- header 끝 -->
 
-                  <div style="width: 500px; height: 50px; float: left;">
+		<div id="container">
+		
+			<form method="get" id="adminMain">
+			
+		<div style="float: left; width: 200px; height: 800px; background: #ECECED; "></div>
 
-                     <div class="form-group">
-                        <label
-                           style="width: 110px; float: left; margin-top: 10px; margin-left: 50px"><strong>가입
-                              일자</strong></label>
+			<div id="content">
+			
+			
+				<div class="alert alert-success">안녕하세요? [<c:out value="${ adminId }"/>]로 로그인하셨습니다.</div>
+				<div style="padding-left: 70px; padding-right: 100px">
+				<div>
+					<button type="button" class="btn btn-success" id="mainBtn">회원/방문자
+						현황</button>
+				</div>
 
-                        <div class="input-group date"
-                           style="float: left; width: 150px; margin-top: 5px;">
-                           <span class="input-group-addon"> <img
-                              src="http://localhost:8080/team1_admin_prj3_soin_191211_1642/common/images/icon_calendar.png"
-                              style="margin-left: 2px; width: 30px" />
-                           </span> <input type="text" class="form-control form-control-sm">
-                           <label>~</label>
-                        </div>
+				<hr color="#333" width="90%">
 
-                        <div class="input-group date"
-                           style="width: 150px; margin-top: 5px;">
-                           <span class="input-group-addon" style="float: left"> <img
-                              src="http://localhost:8080/team1_admin_prj3_soin_191211_1642/common/images/icon_calendar.png"
-                              style="margin-left: 2px; width: 30px" />
-                           </span> <input type="text" class="form-control form-control-sm">
-                        </div>
+				<div class="card" id="box">
+					<div class="card-body">
+						<h5 class="title">오늘 방문 회원</h5>
+						<h5 class="card-text" style="text-align: center;">
+						<c:out value="${ selectCnt }"/>
+						</h5>
+					</div>
+				</div>
 
-                     </div>
-                  </div>
+				<div class="card" id="box">
+					<div class="card-body">
+						<h5 class="title">오늘 회원 가입</h5>
+						<h5 class="card-text" style="text-align: center;">
+						<c:out value="${ selectJoinCnt }"/>
+						</h5>
+					</div>
+				</div>
 
-
-                  <br />
-                  <div style="margin-left: 30px; float: left">
-                     <label style="float: left;"><strong>회원 등급</strong></label>&nbsp;
-                     <div style="float: left; margin-left: 10px">
-                        <a href="admin_member_grade.do" target="_blank"><img
-                           src="http://localhost:8080/team1_admin_prj3_soin_191211_1642/common/images/question_mark.png" /></a> <input
-                           type="checkbox" value="ALL" checked="checked" />전체&nbsp; <input
-                           type="checkbox" value="VIP" />VIP&nbsp; <input type="checkbox"
-                           value="BRONZE" />BRONZE&nbsp; <input type="checkbox"
-                           value="SILVER" />SILVER&nbsp; <input type="checkbox"
-                           value="GOLD" />GOLD&nbsp; <input type="checkbox" value="FAMILY" />FAMILY
-                     </div>
-                  </div>
-
-                  <div
-                     style="width: 500px; height: 50px; margin-top: 10px; margin-left: 140px; float: left">
-                     <input type="button" class="btn btn-secondary" value="상세 조회" />
-                  </div>
+				<div class="card" id="box">
+					<div class="card-body">
+						<h5 class="title">총 누적 회원</h5>
+						<h5 class="card-text" style="text-align: center;">
+						<c:out value="${ selectAllCnt }"/>
+						</h5>
+					</div>
+				</div>
 
 
-               </div>
+				<div>
+					<button type="button" class="btn btn-success" id="mainBtn">게시물
+						현황</button>
+					<button type="button" class="btn btn-success" id="mainBtn">주문
+						정산 현황</button>
+				</div>
 
-               <div
-                  style="width: 600px; height: 550px; padding: 15px; border: 1px solid #333; margin-top: 25px;">
-                  <div style="float: right">
-                  <c:forEach var="data" items="${ memberData }">
-                     <label>총 회원 수 : <c:out value="${ data.totalCnt }"/>명</label>
-                  </c:forEach>
-                  </div>
+				<hr color="#333" width="90%">
 
-                  <div>
-                     <table class="table">
-                        <thead>
-                           <tr>
-                              <th scope="col">번호</th>
-                              <th scope="col">아이디</th>
-                              <th scope="col">회원 이름</th>
-                              <th scope="col">등급</th>
-                              <th scope="col">전화번호</th>
-                              <th scope="col">구매금액</th>
-                              <th scope="col">가입 일자</th>
-                           </tr>
-                        </thead>
-                        <tbody>
+				<div>
 
-                           <%
-                              for (int i = 0; i < 9; i++) {
-                           %>
-                           <c:forEach var="data" items="${ memberData }">
-                              <tr>
-                                 <th scope="row"><%=i + 1%></th>
-                                 <td><c:out value="${ data.id }" /></td>
-                                 <td><c:out value="${ data.name }" /></td>
-                                 <td><c:out value="${ data.grade }" /></td>
-                                 <td><c:out value="${ data.phone }" /></td>
-                                 <td><c:out value="${ data.purchaseAmount }" /></td>
-                                 <td><c:out value="${ data.joinDate }" /></td>
-                              </tr>
-                           </c:forEach>
-                           <%
-                              }
-                           %>
+					<div class="card" id="box">
+						<div class="card-body">
+							<h5 class="title">1:1문의(미응답)</h5>
+							<h5 class="card-text" style="text-align: center;">
+							<c:out value="${ selectQNA }"/>
+							</h5>
+						</div>
+					</div>
 
-                        </tbody>
-                     </table>
+					<div class="card" id="box">
+						<div class="card-body">
+							<h5 class="title">오늘 주문건 수</h5>
+							<h5 class="card-text" style="text-align: center;">
+							<c:out value="${ selectOrderCnt }"/></h5>
+						</div>
+					</div>
 
-                  </div>
+					<div class="card" id="box">
+						<div class="card-body">
+							<h5 class="title">오늘 주문 금액</h5>
+							<h5 class="card-text" style="text-align: center;">
+							<c:out value="${ selectOrderPrice }"/>
+							</h5>
+						</div>
+					</div>
 
-               </div>
+				</div>
 
-               <nav aria-label="Page navigation example">
-                  <div style="margin-top: 15px; margin-left: 230px">
-                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"
-                           aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                        </a></li>
-                     </ul>
-                  </div>
-               </nav>
-               <!-- 회원 정보 검색 끝 -->
-            </div>
-         </div>
-         <!-- content 끝 -->
+				<div>
+					<button type="button" class="btn btn-success" id="mainBtn">공지사항</button>
+				</div>
+				<hr color="#333" width="90%">
+				<table class="table table-sm" style="margin-left: 50px; width: 90%">
+					<tbody>
+					<c:forEach var="selectMainNoticeList" items="${ requestScope.selectMainNoticeList }">
+						<tr>
+							<th>●</th>
+							<th scope="row">
+							<c:out value="${ selectMainNoticeList }"/>
+							</th>
+						</tr>
+					</c:forEach>
+					</tbody>
+				</table>
+				
+				<c:if test="${ empty selectMainNoticeList }">
+				<div> 공지사항이 존재하지 않습니다.</div>
+				</c:if>
 
-      </div>
-      <!-- container 끝 -->
 
-      <div id="footer">
-         <%@ include file="../../common/jsp/admin_include_footer.jsp"%>
+</div>
+		</div>
+		<!-- content 끝 -->
+</form>
+	</div>
+	<!-- container 끝 -->
 
-      </div>
+	<div id="footer">
+ <%@ include file="../../common/jsp/admin_include_footer.jsp" %>
+
+	</div>
+</div>
 </body>
 </html>

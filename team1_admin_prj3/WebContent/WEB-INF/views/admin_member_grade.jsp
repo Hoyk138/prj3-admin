@@ -26,7 +26,7 @@
 <body>
 <div style="width: 1000px; text-align: center;">
    <div id="admin_member_grade">
-      <img src="http://localhost:8080/team1_admin_prj3_soin_191211_1642/common/images/member_grade.png" />
+      <img src="http://211.63.89.133/team1_admin_prj3/common/images/member_grade.png" />
    </div>
    <div>
       <input type="button" class="btn btn-secondary" value="등급 갱신 " />
