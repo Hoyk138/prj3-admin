@@ -13,8 +13,8 @@
 <head>
 <meta charset="UTF-8">
 <title>E-Book 등록</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/jsp_prj/common/css/main.css"/>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
 
    #registImage{  width: 200px; height: 500px;  padding-top:70px; float:left;  /* border: 1px solid #333; */ }
@@ -33,9 +33,9 @@
 
 <!-- datepicker -->
 <link rel="stylesheet"
-	href="http://localhost:8080/team1_admin_prj3/common/css/bootstrap-datepicker3.min.css">
-<script src="http://localhost:8080/team1_admin_prj3/common/js/bootstrap-datepicker.min.js"></script>
-<script src="http://localhost:8080/team1_admin_prj3/common/js/bootstrap-datepicker.ko.min.js"></script>
+	href="http://211.63.89.133/team1_admin_prj3/common/css/bootstrap-datepicker3.min.css">
+<script src="http://211.63.89.133/team1_admin_prj3/common/js/bootstrap-datepicker.min.js"></script>
+<script src="http://211.63.89.133/team1_admin_prj3/common/js/bootstrap-datepicker.ko.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('.input-group.date').datepicker({
@@ -200,7 +200,7 @@ $(function(){
 		<div style="margin-left: 300px">
 		
 			<div id="registImage">
-				<img id="viewImg"src="http://localhost:8080/team1_admin_prj3/common/images/book/noImg.jpg" width="200px" height="250px"/>
+				<img id="viewImg"src="http://211.63.89.133/team1_admin_prj3/common/images/book/noImg.jpg" width="200px" height="250px"/>
 				
 			    <!-- RFC 1867 HTML Form 기반의 파일 업로드 -->
 				<input type="file" name="upfile" id="upfile" class="inputBox"  style="width: 200px; margin-top: 15px;"><br/>
@@ -256,7 +256,7 @@ $(function(){
 				  		<label><span id="subjectText">출간일</span></label> 
 				  		<input type="text" class="form-control" id="translator"  name="translator" style="width: 150px">
 				  		<span class="input-group-addon">
-					     <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" />
+					     <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" />
 					  </span>
 			  		</div> 
 			  		</div>
@@ -267,7 +267,7 @@ $(function(){
 					  		<label><span id="subjectText">출간일</span></label> 
 					  		<input type="text" class="form-control" id="pub_date"  name="pub_date" style="width: 150px;" >
 					  <span class="input-group-addon">
-					     <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" />
+					     <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" />
 					  </span>
 				    	</div>
 			    	</div> -->
@@ -282,7 +282,7 @@ $(function(){
 				    	<label><span id="subjectText">출간일</span></label> 
 				  		<input type="text" class="form-control" id="pub_date"  name="pub_date" >
 					  <span class="input-group-addon">
-					     <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
+					     <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
 					  </span>
 					</div>
 			  	</div> -->
@@ -303,7 +303,7 @@ $(function(){
 				    <!-- <div class="input-group date" style="width : 190px;">
 					  <input type="text" class="form-control" id="pub_date"  name="pub_date" >
 					  <span class="input-group-addon">
-					    <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
+					    <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
 					  </span>
 					</div> -->
 					

@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/main.css" />
+	href="http://211.63.89.133/team1_admin_prj3/common/css/main.css" />
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
+	href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css" />
 <style type="text/css">
 </style>
 
@@ -31,9 +31,9 @@
 
 <!-- datepicker -->
 <link rel="stylesheet"
-	href="http://localhost:8080/team1_admin_prj3/common/css/bootstrap-datepicker3.min.css">
-<script src="http://localhost:8080/team1_admin_prj3/common/js/bootstrap-datepicker.min.js"></script>
-<script src="http://localhost:8080/team1_admin_prj3/common/js/bootstrap-datepicker.ko.min.js"></script>
+	href="http://211.63.89.133/team1_admin_prj3/common/css/bootstrap-datepicker3.min.css">
+<script src="http://211.63.89.133/team1_admin_prj3/common/js/bootstrap-datepicker.min.js"></script>
+<script src="http://211.63.89.133/team1_admin_prj3/common/js/bootstrap-datepicker.ko.min.js"></script>
 
 <script type="text/javascript">
 	$(function() {
@@ -91,7 +91,7 @@
 							style="width: 300px; float: left; margin-left: 10px; margin-top: 10px">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="addon-wrapping">
-								<img src="http://localhost:8080/team1_admin_prj3/common/images/search.png"
+								<img src="http://211.63.89.133/team1_admin_prj3/common/images/search.png"
 									 style="height: 15px" />
 								</span>
 							</div>
@@ -109,7 +109,7 @@
 
 								<div class="input-group date" style="float: left; width: 150px; margin-top: 10px;">
 									<span class="input-group-addon">
-									<img src="http://localhost:8080/team1_admin_prj3/common/images/icon_calendar.png"
+									<img src="http://211.63.89.133/team1_admin_prj3/common/images/icon_calendar.png"
 										style="margin-left: 2px; width: 30px" />
 									</span>
 									<!-- 검색 시작 날짜Parameter -->
@@ -119,7 +119,7 @@
 
 								<div class="input-group date" style="float:left; width: 150px; margin-top: 10px;">
 									<span class="input-group-addon" style="float: left">
-									<img src="http://localhost:8080/team1_admin_prj3/common/images/icon_calendar.png"
+									<img src="http://211.63.89.133/team1_admin_prj3/common/images/icon_calendar.png"
 										style="margin-left: 2px; width: 30px" />
 									</span>
 									<!-- 검색 끝 날짜 Parameter -->
@@ -135,7 +135,7 @@
 							<label style="float: left;"><strong>회원 등급</strong></label>&nbsp;
 							<div style="float: left; margin-left: 10px">
 								<a href="admin_member_grade.jsp" target="_blank"><img
-									src="http://localhost:8080/team1_admin_prj3/common/images/question_mark.png" /></a> <input
+									src="http://211.63.89.133/team1_admin_prj3/common/images/question_mark.png" /></a> <input
 									type="checkbox" value="ALL" checked="checked" />전체&nbsp; <input
 									type="checkbox" value="VIP" />VIP&nbsp; <input type="checkbox"
 									value="BRONZE" />BRONZE&nbsp; <input type="checkbox"

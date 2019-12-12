@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/jsp_prj/common/css/main.css" />
+	href="http://211.63.89.133/jsp_prj/common/css/main.css" />
 <style type="text/css">
 #books {
 	height: 1100px;

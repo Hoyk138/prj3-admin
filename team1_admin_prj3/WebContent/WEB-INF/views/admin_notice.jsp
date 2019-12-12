@@ -14,8 +14,8 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/jsp_prj/common/css/main.css"/>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
    
    	#notice{ font-size: 30px; font-weight: bold;}

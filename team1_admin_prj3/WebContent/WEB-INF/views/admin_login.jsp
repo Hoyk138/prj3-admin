@@ -9,9 +9,9 @@
 <title>관리자 로그인</title>
 
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/main.css">
+	href="http://211.63.89.133/team1_admin_prj3/common/css/main.css">
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
+	href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css" />
 <style type="text/css">
 #loginBox {
 	padding-top: 100px;

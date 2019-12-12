@@ -13,8 +13,8 @@
 <head>
 <meta charset="UTF-8">
 <title>E-Book 상세 및 수정</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/jsp_prj/common/css/main.css"/>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
 
    #registImage{  width: 200px; height: 500px;  padding-top:70px; float:left;  /* border: 1px solid #333; */ }
@@ -198,7 +198,7 @@ $(function(){
 			<div style="margin-left: 300px">
 			<div id="registImage">
 				
-				<img id="viewImg"src="http://localhost:8080/team1_admin_prj3/common/images/book/${ cateEnglish }/${ bookDetailData.img }" width="200px" height="250px"/>
+				<img id="viewImg"src="http://211.63.89.133/team1_admin_prj3/common/images/book/${ cateEnglish }/${ bookDetailData.img }" width="200px" height="250px"/>
 				
 				
 			    <!-- RFC 1867 HTML Form 기반의 파일 업로드 -->

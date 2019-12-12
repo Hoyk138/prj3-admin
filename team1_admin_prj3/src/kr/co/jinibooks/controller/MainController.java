@@ -10,68 +10,73 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import kr.co.jinibooks.domain.MainNoticeListDomain;
 import kr.co.jinibooks.service.LoginService;
 import kr.co.jinibooks.service.MainSelectService;
 import kr.co.jinibooks.vo.LoginVO;
-@SessionAttributes("adminId")
+
 @Controller
 public class MainController {
 
-	@RequestMapping(value = "admin_login.do", method = GET)
-	public String loginPage(Model model) {
+   @RequestMapping(value = "admin_login.do", method = GET)
+   public String loginPage(Model model) {
 
-		return "admin_login";
-	}// mainPage
+      return "admin_login";
+   }// mainPage
+   
+   @RequestMapping(value = "admin_member_grade.do", method = GET)
+   public String memberGrade(Model model) {
+      
+      return "admin_member_grade";
+   }// mainPage
 
-	/**
-	 * 입력받은 id, passwd 유무
-	 * 
-	 * @param lVO
-	 * @param model
-	 * @return
-	 */
-	@RequestMapping(value = "admin_login_process.do", method = POST)
-	@ResponseBody
-	public String loginProcess(LoginVO lVO, Model model) {
+   /**
+    * 입력받은 id, passwd 유무
+    * 
+    * @param lVO
+    * @param model
+    * @return
+    */
+   @RequestMapping(value = "admin_login_process.do", method = POST)
+   @ResponseBody
+   public String loginProcess(LoginVO lVO, Model model) {
 
-		LoginService ls = new LoginService();
-		JSONObject json = ls.chkLogin(lVO);
+      LoginService ls = new LoginService();
+      JSONObject json = ls.chkLogin(lVO);
 
-		return json.toJSONString();
-	}// mainPage
+      return json.toJSONString();
+   }// mainPage
 
-	
-	/**
-	 * 로그인 성공했을 때 id와 pass보내기
-	 * 
-	 * @param lVO
-	 * @param model
-	 * @return
-	 */
-	@RequestMapping(value = "admin_main.do", method = {GET,POST})
-	public String adminMain(LoginVO lVO, Model model) {
+   
+   /**
+    * 로그인 성공했을 때 id와 pass보내기
+    * 
+    * @param lVO
+    * @param model
+    * @return
+    */
+   @RequestMapping(value = "admin_main.do", method = {GET,POST})
+   public String adminMain(LoginVO lVO, Model model) {
 
-		MainSelectService ss=new MainSelectService();
-		List<MainNoticeListDomain> selectMainNoticeList = ss.selectMainNoticeList();
-		
-		
-		// session에 넣기 위해 annotation 달아주기
-		 model.addAttribute("adminId", lVO.getId()) ;
+      MainSelectService ms=new MainSelectService();
+      List<MainNoticeListDomain> selectMainNoticeList = ms.selectMainNoticeList();
+      
+      
+      // session에 넣기 위해 annotation 달아주기
+       model.addAttribute("adminId", lVO.getId()) ;
 
-		 // 메인에 뜨는 값들
-		 model.addAttribute("selectCnt", ss.selectCnt()) ;
-		 model.addAttribute("selectJoinCnt", ss.selectJoinCnt()) ;
-		 model.addAttribute("selectAllCnt", ss.selectAllCnt()) ;
-		 model.addAttribute("selectQNA", ss.selectQNA()) ;
-		 model.addAttribute("selectOrderCnt", ss.selectOrderCnt()) ;
-		 model.addAttribute("selectOrderPrice", ss.selectOrderPrice()) ;
-		 model.addAttribute("selectMainNoticeList", ss.selectMainNoticeList()) ;
-		 
-		return "admin_main";
-	} // loginProcess
+       // 메인에 뜨는 값들
+       model.addAttribute("selectCnt", ms.selectCnt()) ;
+       model.addAttribute("selectJoinCnt", ms.selectJoinCnt()) ;
+       model.addAttribute("selectAllCnt", ms.selectAllCnt()) ;
+       model.addAttribute("selectQNA", ms.selectQNA()) ;
+       model.addAttribute("selectOrderCnt", ms.selectOrderCnt()) ;
+       model.addAttribute("selectOrderPrice", ms.selectOrderPrice()) ;
+       model.addAttribute("selectMainNoticeList", ms.selectMainNoticeList()) ;
+       
+      return "admin_main";
+   } // loginProcess
 
 
 }// class

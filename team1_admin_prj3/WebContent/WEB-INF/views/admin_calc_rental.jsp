@@ -13,8 +13,8 @@
 <head>
 <meta charset="UTF-8">
 <title>E-Book 대여 관리</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/jsp_prj/common/css/main.css"/>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
 
 </style>
@@ -90,14 +90,14 @@
 	<div class="input-group date">
 	  <input type="text" class="form-control form-control-sm" id="input_date" name="input_date"  style="width: 100px;">
 	  <span class="input-group-addon">
-	    <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
+	    <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
 	  </span>
 	</div>
 	 ~ 
 	<div class="input-group date">
 	  <input type="text" class="form-control form-control-sm" id="input_date" name="input_date"  style="width: 100px;">
 	  <span class="input-group-addon">
-	    <img src="http://localhost:8080/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
+	    <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" style="margin-top: 5px; margin-left: 2px;"/>
 	  </span>
 	</div>
 	

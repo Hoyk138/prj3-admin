@@ -4,13 +4,13 @@
 %>
 
  <!-- SmartMenus  CSS 시작 -->
-    <link href="http://localhost:8080/spring_mvc_temp/common/smart_menu/css/sm-core-css.css" rel="stylesheet" type="text/css" />
-   <!--  <link href="http://localhost:8080/html_prj/common/smart_menu/css/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" /> -->
-<!--  <link href="http://localhost:8080/html_prj/common/smart_menu/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" /> -->
-    <link href="http://localhost:8080/spring_mvc_temp/common/smart_menu/css/sm-simple/sm-simple.css" rel="stylesheet" type="text/css" />
+    <link href="http://211.63.89.133/spring_mvc_temp/common/smart_menu/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+   <!--  <link href="http://211.63.89.133/html_prj/common/smart_menu/css/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" /> -->
+<!--  <link href="http://211.63.89.133/html_prj/common/smart_menu/css/sm-clean/sm-clean.css" rel="stylesheet" type="text/css" /> -->
+    <link href="http://211.63.89.133/spring_mvc_temp/common/smart_menu/css/sm-simple/sm-simple.css" rel="stylesheet" type="text/css" />
   <!-- SmartMenus  CSS 끝 -->
   <!-- SmartMenus 시작 -->
-    <script type="text/javascript" src="http://localhost:8080/spring_mvc_temp/common/smart_menu/jquery.smartmenus.min.js"></script>
+    <script type="text/javascript" src="http://211.63.89.133/spring_mvc_temp/common/smart_menu/jquery.smartmenus.min.js"></script>
     <script type="text/javascript">
 
     </script>

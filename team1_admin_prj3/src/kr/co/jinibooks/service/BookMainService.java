@@ -52,10 +52,10 @@ public class BookMainService {
 			String cateCode = buVO.getCategory_code();
 			String cate = cateCodeToEnglish(cateCode);
 			
-			System.out.println("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			System.out.println("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
 
 			//2. 경로 설정
-			File file = new File("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			File file = new File("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
 			
 			try {
 				//3. 파일 보내기

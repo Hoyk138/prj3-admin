@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/main.css" />
+	href="http://211.63.89.133/team1_admin_prj3/common/css/main.css" />
 <link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/team1_admin_prj3/common/css/admin_main_design.css" />
+	href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css" />
 <style type="text/css">
 </style>
 
@@ -78,7 +78,7 @@
 						style="width: 250px; float: left; margin-left: 10px; margin-top: 10px">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="addon-wrapping">
-							<img src="http://localhost:8080/team1_admin_prj3/common/images/search.png"
+							<img src="http://211.63.89.133/team1_admin_prj3/common/images/search.png"
 							 style="height: 15px" />
 							</span>
 						</div>

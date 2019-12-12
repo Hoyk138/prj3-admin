@@ -7,7 +7,7 @@
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
    <div id="hLogo">
-     <!-- <a href="#"><img src="http://localhost:8080/team1_admin_prj3/common/images/logo1.png" title="로고"/></a></div> -->
+     <!-- <a href="#"><img src="http://211.63.89.133/team1_admin_prj3/common/images/logo1.png" title="로고"/></a></div> -->
      <div id="hContent">
        <span id="hTitle">JINI BOOKS</span>
      </div>

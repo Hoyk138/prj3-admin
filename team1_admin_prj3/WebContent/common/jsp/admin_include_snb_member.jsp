@@ -6,7 +6,7 @@
     %>
  <div style="float: left; width: 200px; height: 950px; background: #ECECED; ">
 	<div class="sidebar-sticky" align="center">
-		<img src="http://localhost:8080/team1_admin_prj3/common/images/member.png" />
+		<img src="http://211.63.89.133/team1_admin_prj3/common/images/member.png" />
 
 		<h4 style="background-color: #F57244; width: 160px; height: 30px;">
 			<strong>회원 관리</strong>
