@@ -16,11 +16,11 @@
 		<ul class="member-column1" style="text-align: left; margin-left: 30px">
 
 			<li class="nav-item">
-			<a class="nav-link" href="notice.do" ><span style="font-size: 15px">공지사항</span></a>
+			<a class="nav-link" href="notice.do" style="color: black;"><span style="font-size: 15px" >공지사항</span></a>
 			</li>
 
 			<li class="nav-item">
-			<a class="nav-link" href="question.do"><span style="font-size: 15px">문의사항</span></a>
+			<a class="nav-link" href="question.do" style="color: black;"><span style="font-size: 15px">문의사항</span></a>
 			</li>
 			
 		</ul>

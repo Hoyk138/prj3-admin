@@ -66,10 +66,13 @@ public class Question_Controller {
 		  
 	  String id =(String)session.getAttribute("adminId");
 		qVO.setId(id);
+		
+		System.out.println(id);
 	 
 	  QuestionBoardListService bls=new QuestionBoardListService(); 
 	  QuestionListDomain  bld=bls.searchNoticeDetail(num);
 	  model.addAttribute("question_detail",bld);
+	  model.addAttribute("admin_id",id);
 	  return "admin_question_modified"; }//searchEmpData
 	  
 	  @RequestMapping(value = "modified_process2.do", method = POST) public String

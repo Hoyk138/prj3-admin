@@ -79,7 +79,7 @@ $(function() {
     <tr style="max-height: 40px;">
       <th scope="row">
       <c:out value="${fn:substring(blVO.num,2,8)}"/></th>
-      <td><a href="detail.do?num=${ blVO.num}"><c:out value="${blVO.subject}"/></a></td>
+      <td><a href="detail.do?num=${ blVO.num}" style="color: black;"><c:out value="${blVO.subject}"/></a></td>
       <td><c:out value="${blVO.w_day}"/></td>
     </tr>
   </c:forEach>
