@@ -13,7 +13,7 @@
 <head>
 <meta charset="UTF-8">
 <title>E-Book 상세 및 수정</title>
-<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/main.css"/>
 <link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
 

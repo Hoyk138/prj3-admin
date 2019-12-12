@@ -13,7 +13,7 @@
 <head>
 <meta charset="UTF-8">
 <title>E-Book 등록</title>
-<link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/main.css"/>
 <link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
 
@@ -256,7 +256,7 @@ $(function(){
 				  		<label><span id="subjectText">출간일</span></label> 
 				  		<input type="text" class="form-control" id="translator"  name="translator" style="width: 150px">
 				  		<span class="input-group-addon">
-					     <img src="http://211.63.89.133/Team1_prj3/common/images/icon_calendar.png" />
+					     <img src="http://211.63.89.133/team1_admin_prj3/common/images/icon_calendar.png" />
 					  </span>
 			  		</div> 
 			  		</div>
