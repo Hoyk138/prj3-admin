@@ -74,12 +74,22 @@ public class BookMainController {
 		return "admin_book_detail_modify";
 	}//searchBookData    
 	
+//	@RequestMapping(value="admin_book_detail_modify_process.do", method=POST)
+//	@ResponseBody
+//	public String modifyBookData(BookUpdateVO buVO, @RequestParam("upfile") MultipartFile multipartFile) {
+//		
+//		BookMainService bms=new BookMainService();
+//		JSONObject json=bms.modifyBook(buVO ,multipartFile);
+//		
+//		return json.toJSONString();
+//	}//modifyBookData
+	
 	@RequestMapping(value="admin_book_detail_modify_process.do", method=POST)
 	@ResponseBody
-	public String modifyBookData(BookUpdateVO buVO, @RequestParam("upfile") MultipartFile multipartFile) {
+	public String modifyBookData(BookUpdateVO buVO) {
 		
 		BookMainService bms=new BookMainService();
-		JSONObject json=bms.modifyBook(buVO ,multipartFile);
+		JSONObject json=bms.modifyBook(buVO);
 		
 		return json.toJSONString();
 	}//modifyBookData

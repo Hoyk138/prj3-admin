@@ -51,8 +51,36 @@ $(function(){
             alert("도서명을 입력해주세요");
             $("#title").focus();
             return;
-            
-         
+    	}
+    	
+    	if($("#author").val() == ""){
+            alert("저자명을 입력해주세요");
+            $("#author").focus();
+            return;
+    	}
+    	
+    	if($("#company").val() == ""){
+            alert("출판사를 입력해주세요");
+            $("#company").focus();
+            return;
+    	}
+    	
+    	if($("#pub_date").val() == ""){
+            alert("출간일을 입력해주세요");
+            $("#pub_date").focus();
+            return;
+    	}
+    	
+    	if($("#sale_price").val() == ""){
+            alert("판매가를 입력해주세요");
+            $("#sale_price").focus();
+            return;
+    	}
+    	
+    	if($("#rental_price").val() == ""){
+            alert("대여가를 입력해주세요");
+            $("#rental_price").focus();
+            return;
     	}
 		
 		//JavaScript로 charset Encoding 함수 : encodeURI()
@@ -254,7 +282,7 @@ $(function(){
 			    	<div class="form-group col-md-6">
 			    	<div class="input-group date" >
 				  		<label><span id="subjectText">출간일</span></label> 
-				  		<input type="text" class="form-control" id="translator"  name="translator" style="width: 150px">
+				  		<input type="text" class="form-control" id="pub_date"  name="pub_date" style="width: 150px">
 				  		<span class="input-group-addon">
 					     <img src="http://211.63.89.133/team1_admin_prj3/common/images/icon_calendar.png" />
 					  </span>

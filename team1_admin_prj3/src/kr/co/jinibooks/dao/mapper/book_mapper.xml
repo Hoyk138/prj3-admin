@@ -47,7 +47,7 @@
 
 <update id="updateBook" parameterType="buVO">  <!--  buVO : 업데이트할 값을 받을 VO -->
 	UPDATE  BOOK
-	SET		IMG=#{img}, CATEGORY_CODE=#{category_code}, TITLE=#{title}, AUTHOR=#{author}, TRANSLATOR=#{translator}, COMPANY=#{company}, 
+	SET		CATEGORY_CODE=#{category_code}, TITLE=#{title}, AUTHOR=#{author}, TRANSLATOR=#{translator}, COMPANY=#{company}, 
 	 			SALE_CLASS=#{sale_class}, SALE_STATE=#{sale_state}, INTRO=#{intro}, 	REVIEW=#{review},	AUTHOR_INTRO=#{author_intro}, 	BOOK_INDEX=#{book_index},		
                 SALE_PRICE=#{sale_price}, RENTAL_PRICE=#{rental_price}
 	WHERE   BOOK_CODE=#{ book_code }   <!-- VO일때는 getter이기 때문에 대소문자 구분해줘야함 -->

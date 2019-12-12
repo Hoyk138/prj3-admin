@@ -42,7 +42,7 @@
 	$(function() {
 
 		$("#btn").click(function() {
-			alert("!");
+			//alert("!");
 			chkNull();
 		}); // click
 

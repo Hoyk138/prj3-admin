@@ -16,39 +16,8 @@
 <link rel="stylesheet" type="text/css" href="http://211.63.89.133/jsp_prj/common/css/main.css"/>
 <link rel="stylesheet" type="text/css" href="http://211.63.89.133/team1_admin_prj3/common/css/admin_main_design.css"/>
 <style type="text/css">
-   #books{ width: 1200px; height: 1150px; margin: 0px auto;}
-   /* 헤더 시작 */   
-   #header{ width: 1200px; height: 200px; position: relative; background: #F58E69}
-   /* #hLogo{ width: 84px; height: 84px; position: absolute; top:10px; left: 50px; } */
-   #hContent{ width: 1100px; height: 90px; padding-top:10px; position: absolute;  top:20px; left: 50px; }
-   #naviBar{ height: 80px; top: 120px;/* position: absolute;  top: 100px; */}
-   
-   #hTitle{ font-family: '고딕'; font-size: 30px; font-weight: bold; color: #FFFFFF}
-   /* 헤더 끝 */
-   
-   /* 컨테이너 시작 */
-   #container{ height: 800px; }
-   
-   #snb{ float: left; width: 200px; height: 800px; background: #F08060; }
-   #snb-header{ width: 200px; height: 200px; }
-   #snb-header-img{ width: 200px; height: 170px; }
-   #snb-header-txt{ width: 200px; height: 30px; text-align: center; }
-   #snb-menu{ width: 200px; height: 585px; margin-top: 15px; text-align: center; }
-   
-   #content{ float: right; width:1000px; height: 800px; padding: 20px; overflow: scroll}
-
-   /* 컨테이너 끝 */
-   
-   /* 푸터 시작 */
-   #footer {height: 150px;background-color: #FFEBE3;}
-/* #fLogo{ width: 180px; height: 130px; padding-top: 20px; padding-left: 20px; float: left;}	 */
-	#fContent {width: 670px; height: 110px; padding-top: 40px; padding-left: 30px; float: center;}
-	#fContentInfo{ height: 150px; font-size: 13px;padding-left:80px ;/*margin-top:15px;*/  }
-   
-   /* 푸터 끝 */
    
    	#notice{ font-size: 30px; font-weight: bold;}
-   
    
 </style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

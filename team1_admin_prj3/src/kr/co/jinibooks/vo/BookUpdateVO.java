@@ -2,14 +2,9 @@ package kr.co.jinibooks.vo;
 
 public class BookUpdateVO {
 	
-	private String img, category_code, book_code, title, author, translator, company, sale_class, sale_state, intro, review,	author_intro, 	book_index	;	
+	private String category_code, book_code, title, author, translator, company, sale_class, sale_state, intro, review,	author_intro, 	book_index	;	
 	private int sale_price, rental_price;
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
-	}
+	
 	public String getCategory_code() {
 		return category_code;
 	}
@@ -94,14 +89,16 @@ public class BookUpdateVO {
 	public void setRental_price(int rental_price) {
 		this.rental_price = rental_price;
 	}
+	
 	@Override
 	public String toString() {
-		return "BookUpdateVO [img=" + img + ", category_code=" + category_code + ", book_code=" + book_code + ", title="
-				+ title + ", author=" + author + ", translator=" + translator + ", company=" + company + ", sale_class="
+		return "BookUpdateVO [category_code=" + category_code + ", book_code=" + book_code + ", title=" + title
+				+ ", author=" + author + ", translator=" + translator + ", company=" + company + ", sale_class="
 				+ sale_class + ", sale_state=" + sale_state + ", intro=" + intro + ", review=" + review
 				+ ", author_intro=" + author_intro + ", book_index=" + book_index + ", sale_price=" + sale_price
 				+ ", rental_price=" + rental_price + "]";
 	}
+	
 	
 	
 }

@@ -35,6 +35,37 @@ $(function(){
 	
 	$("#bookUpdate").click(function(){
 		
+	  	if($("#title").val() == ""){
+            alert("도서명을 입력해주세요");
+            $("#title").focus();
+            return;
+    	}
+    	
+    	if($("#author").val() == ""){
+            alert("저자명을 입력해주세요");
+            $("#author").focus();
+            return;
+    	}
+    	
+    	if($("#company").val() == ""){
+            alert("출판사를 입력해주세요");
+            $("#company").focus();
+            return;
+    	}
+    	
+    	
+    	if($("#sale_price").val() == ""){
+            alert("판매가를 입력해주세요");
+            $("#sale_price").focus();
+            return;
+    	}
+    	
+    	if($("#rental_price").val() == ""){
+            alert("대여가를 입력해주세요");
+            $("#rental_price").focus();
+            return;
+    	}
+		
 		//JavaScript로 charset Encoding 함수 : encodeURI()
 		/* alert($("#book_code").val());
 		alert(encodeURI( $("#book_code").val()));
@@ -50,7 +81,7 @@ $(function(){
 		form.enctype = "multipart/form-data";
 		
 		var formData = new FormData(form);
-		alert(formData);
+		//alert(formData);
 					
 		$.ajax({
 			url:"admin_book_detail_modify_process.do",
@@ -80,7 +111,7 @@ $(function(){
 	});//click
 	$("#bookDelete").click(function(){
 		var param="book_code="+encodeURI( $("#book_code").val() );
-		alert($("#book_code").val());
+		//alert($("#book_code").val());
 		$.ajax({
 			url:"admin_book_delete_process.do",
 			type:"post",
@@ -198,16 +229,20 @@ $(function(){
 			<div style="margin-left: 300px">
 			<div id="registImage">
 				
+<<<<<<< HEAD
+				<img id="viewImg"src="http://localhost:8080/team1_admin_prj3/common/images/book/${ cateEnglish }/${ bookDetailData.img }" width="200px" height="250px"/>
+				<input type="hidden" name="img" id="img" value="${bookDetailData.img }"> 
+=======
 				<img id="viewImg"src="http://211.63.89.133/team1_admin_prj3/common/images/book/${ cateEnglish }/${ bookDetailData.img }" width="200px" height="250px"/>
 				
+>>>>>>> refs/remotes/origin/master
 				
 			    <!-- RFC 1867 HTML Form 기반의 파일 업로드 -->
-				<input type="file" name="upfile" id="upfile" class="inputBox" style="width: 200px; margin-top: 15px;"><br/>
-				<input type="hidden" id="img" name="img" value="${bookDetailData.img }" />
-				
+				<!-- <input type="file" name="upfile" id="upfile" class="inputBox" style="width: 200px; margin-top: 15px;"><br/> -->
 			</div> <!-- registImage 끝 -->
+				<%-- <input type="hidden" id="img" name="img" value="${bookDetailData.img }" /> --%>
 			
-							
+						
 				<!-- 인풋타입 파일에는 벨류설정불가 히든으로 파일명을 넣어놔 
 				파일변경시 누르면 파일업로드를 수행한다음
 				변경된 파일명을

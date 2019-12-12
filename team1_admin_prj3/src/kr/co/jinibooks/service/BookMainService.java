@@ -41,30 +41,32 @@ public class BookMainService {
 		}//searchOneBook
 		
 		
-		public JSONObject modifyBook(BookUpdateVO buVO, MultipartFile multipartFile) {
+		public JSONObject modifyBook(BookUpdateVO buVO) {
 			boolean flag=false;
 			JSONObject json=new JSONObject();
 			
-			buVO.setImg(multipartFile.getOriginalFilename());
+			//buVO.setImg(multipartFile.getOriginalFilename());
 			
 			//파일 보내기
 			//1. 카테고리 코드 가져와서 해당 폴더 이름 찾기
 			String cateCode = buVO.getCategory_code();
 			String cate = cateCodeToEnglish(cateCode);
 			
-			System.out.println("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			//System.out.println("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			//System.out.println("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
 
 			//2. 경로 설정
-			File file = new File("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			//File file = new File("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+			//File file = new File("http://211.63.89.133/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
 			
-			try {
-				//3. 파일 보내기
-				multipartFile.transferTo(file);
-			} catch (IllegalStateException ise) {
-				ise.printStackTrace();
-			} catch (IOException ioe) {
-				ioe.printStackTrace();
-			}//end catch
+//			try {
+//				//3. 파일 보내기
+//				//multipartFile.transferTo(file);
+//			} catch (IllegalStateException ise) {
+//				ise.printStackTrace();
+//			} catch (IOException ioe) {
+//				ioe.printStackTrace();
+//			}//end catch
 			
 			BookDAO bDao=BookDAO.getInstance();
 			try {
@@ -78,6 +80,44 @@ public class BookMainService {
 			
 			return json;
 		}//modifyBook
+		
+//		public JSONObject modifyBook(BookUpdateVO buVO, MultipartFile multipartFile) {
+//			boolean flag=false;
+//			JSONObject json=new JSONObject();
+//			
+//			//buVO.setImg(multipartFile.getOriginalFilename());
+//			
+//			//파일 보내기
+//			//1. 카테고리 코드 가져와서 해당 폴더 이름 찾기
+//			String cateCode = buVO.getCategory_code();
+//			String cate = cateCodeToEnglish(cateCode);
+//			
+//			System.out.println("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+//			
+//			//2. 경로 설정
+//			File file = new File("http://localhost:8080/team1_admin_prj3/common/images/book/"+cate+"/"+multipartFile.getOriginalFilename());
+//			
+//			try {
+//				//3. 파일 보내기
+//				multipartFile.transferTo(file);
+//			} catch (IllegalStateException ise) {
+//				ise.printStackTrace();
+//			} catch (IOException ioe) {
+//				ioe.printStackTrace();
+//			}//end catch
+//			
+//			BookDAO bDao=BookDAO.getInstance();
+//			try {
+//				int temp=bDao.updateBook(buVO);
+//				flag=temp==1;  //1이면	 true
+//				System.out.println(temp);
+//				json.put("updateResult", flag);
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}//end catch
+//			
+//			return json;
+//		}//modifyBook
 		
 		public JSONObject removeBook(String book_code) {
 			boolean flag=false;
