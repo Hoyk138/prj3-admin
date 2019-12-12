@@ -5,6 +5,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,7 @@ public class Question_Controller {
 		//indexList에서 제공하는 url인 current_page가 조회에 사용되는 sVO의 currentPage와 다름으로 
 		//current_page를 parameter로 받고 sVO에 set하여 줍니다.
 		sVO.setCurrentPage(Integer.parseInt(current_page));
+		
 		
 		//모델2에서는 객체를 자신이 만들지만
 		//프레임워크에서는 프레임 워크가 만들어 준다.
@@ -59,7 +62,10 @@ public class Question_Controller {
 	
 	  @RequestMapping(value = "detail2.do",method = GET) public String
 	  noticedetail(@RequestParam(required = false,defaultValue = "i_000000")String
-	  num,Model model) {
+	  num,Model model,QuestionVO qVO,HttpSession session) {
+		  
+	  String id =(String)session.getAttribute("adminId");
+		qVO.setId(id);
 	 
 	  QuestionBoardListService bls=new QuestionBoardListService(); 
 	  QuestionListDomain  bld=bls.searchNoticeDetail(num);
@@ -67,13 +73,16 @@ public class Question_Controller {
 	  return "admin_question_modified"; }//searchEmpData
 	  
 	  @RequestMapping(value = "modified_process2.do", method = POST) public String
-	  InsertNoticeProcess(QuestionVO ceiVO, Model model) {
+	  InsertNoticeProcess(QuestionVO qVO, Model model,HttpSession session) {
 	  
-	  
+		  String id =(String)session.getAttribute("adminId");
+			qVO.setId(id);
+		  
+		  
 	  //업무처리 클래스를 객체화 
 	QuestionBoardListService ces=new QuestionBoardListService(); 
 	//업무처리 
-	boolean flag=ces.insertnotice(ceiVO); //view로 데이터 전달.
+	boolean flag=ces.insertnotice(qVO); //view로 데이터 전달.
 	  model.addAttribute("insertFlag", flag);
 	  
 	  return "admin_question_success"; }//addEmpProcess

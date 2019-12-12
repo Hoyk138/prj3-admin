@@ -99,7 +99,7 @@ ${ question_detail.content }
 <button type="submit" class="btn btn-outline-primary btn-sm" style="width: 80px; float: right;">답변</button>
 <!-- <input type="hidden" name="answer_flag" value="Y"> -->
 <input type="hidden" name="num" value="${ question_detail.num }">
-<input type="hidden" name="admin_id" value="admin">
+<input type="hidden" name="admin_id" value="${ question_detail.id }">
 </div>
 <br>
 </div>

@@ -10,12 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import kr.co.jinibooks.domain.MainNoticeListDomain;
 import kr.co.jinibooks.service.LoginService;
 import kr.co.jinibooks.service.MainSelectService;
 import kr.co.jinibooks.vo.LoginVO;
-
+@SessionAttributes("adminId")
 @Controller
 public class MainController {
 
